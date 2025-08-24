@@ -17,7 +17,7 @@ import tempfile
 
 @st.cache_resource
 def initialize_google_api():
-    GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY", "AIzaSyCknmXl5ynubSugAdDSVXYeWdNl1athet8")
+    GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY", "Your_API_KEY")
     os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
     genai.configure(api_key=GOOGLE_API_KEY)
     return GoogleGenerativeAIEmbeddings(model="models/embedding-001")
@@ -261,3 +261,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
